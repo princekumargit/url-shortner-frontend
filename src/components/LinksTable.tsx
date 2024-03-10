@@ -70,7 +70,7 @@ const LinksTable: React.FC<Props> = ({ data, render, setRender }) => {
           {currentLinks.map((link) => (
             <tr key={link.id} className=''>
               <td className="px-6 py-4 whitespace-nowrap ">
-                <a href={`${frontend}/${link.id}`} className="bg-green-500 hover:bg-green-700 rounded-md p-2">Link</a>
+                <a href={`${frontend}/go/${link.id}`} className="bg-green-500 hover:bg-green-700 rounded-md p-2">Link</a>
               </td>
               <td className="px-6 py-4 whitespace-nowrap ">
                 <div className="text-sm ">{link.url}</div>
