@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 interface Props {
     isLogin: boolean;
@@ -15,12 +16,14 @@ const Navbar: React.FC<Props> = ({ isLogin }) => {
             {isLogin ?
                 <div>
                     <button className=" rounded-md p-2 bg-red-500 hover:bg-red-700 text-white  mx-2" onClick={handleLogout}>Log Out</button>
-                    <a className=" rounded-md p-2 bg-green-500 hover:bg-green-700 text-white  mx-2" href='/addlink' >Add</a>
-
+                    {/* <a className=" rounded-md p-2 bg-green-500 hover:bg-green-700 text-white  mx-2" href='/addlink' >Add</a> */}
+                    <Link to="/addlink" className=" rounded-md p-2 bg-green-500 hover:bg-green-700 text-white  mx-2">Add</Link>
                 </div> :
                 <div>
-                    <a className=" rounded-md p-2 bg-green-500 hover:bg-green-700 text-white  mx-2" href='/signin'>Sign In</a>
-                    <a className=" rounded-md p-2 bg-green-500 hover:bg-green-700 text-white  mx-2" href='signup'>Sign Up</a>
+                    <Link to="/signin" className="rounded-md p-2 bg-green-500 hover:bg-green-700 text-white mx-2">Sign In</Link>
+                    <Link to="/signup" className="rounded-md p-2 bg-green-500 hover:bg-green-700 text-white mx-2">Sign Up</Link>
+                    {/* <a className=" rounded-md p-2 bg-green-500 hover:bg-green-700 text-white  mx-2" href='/signin'>Sign In</a>
+                    <a className=" rounded-md p-2 bg-green-500 hover:bg-green-700 text-white  mx-2" href='/signup'>Sign Up</a> */}
                 </div>
             }
         </div>
